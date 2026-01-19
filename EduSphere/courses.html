@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EduSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="CSS/courses.css">
+  <link rel="stylesheet" href="CSS/index.css">
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/about.css">
+</head>
+<body>
+    <!-- navbar  -->
+    <nav class="navbar sticky top-2 z-50" id="navbar" style="background-color: #fffaff; width: 90%; margin: 0 auto; border-radius: 20px; padding: 10px 0px 10px 0px;">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex justify-between  h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/db2b2d12-192f-4a84-a58c-b0d0b05b8083.png" alt="EduSphere logo featuring a purple graduation cap with a globe inside representing global learning" class="h-8 w-auto">
+                        <span class="ml-2 text-3xl font-bold text-gray-900">EduSphere</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a>
+                    <a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a>
+                    <a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a>
+                    <a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="sign.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Sign In</a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none" id="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+ 
+     <!-- Sidebar (Mobile Menu) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-72 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40" style="z-index: 100;">
+    <!-- Sidebar Header -->
+    <div class="p-6 flex items-center justify-between" style="background: linear-gradient(90deg, #ae67fa, #f576e5);">
+      <h2 class="text-white text-xl font-bold">EduSphere</h2>
+      <button id="close-btn" class="text-white focus:outline-none">
+        ✕
+      </button>
+    </div>
+
+    <!-- Sidebar Content -->
+    <div class="p-6">
+      <!-- Website image / About preview -->
+      <div class="mb-6">
+        <img src="images/ChatGPT Image Sep 8, 2025, 12_43_27 PM.png" alt="EduSphere" class="rounded-lg shadow">
+        <p class="mt-3 text-sm text-gray-600">Your smart companion for learning, tips, and resources.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="space-y-4 text-gray-800 font-medium">
+                 <li><a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a></li> 
+                    <li><a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a></li>
+                    <li><a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a></li>
+                    <li><a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+
+    <!-- Courses Hero Section -->
+    <section class="course-hero text-white py-20" style="background: linear-gradient(90deg, #ae67fa, #f576e5); border-radius: 20px; margin: 20px;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 fade-in-up">Explore Our Courses</h1>
+            <p class="text-sm mb-8 max-w-3xl text-gray-300 mx-auto fade-in-up">Discover the perfect course to boost your career and expand your knowledge</p>
+            <div class="max-w-xl mx-auto">
+                <form class="flex">
+                    <input type="text" placeholder="Search courses..." class="flex-grow px-4 py-3 rounded-l-md focus:outline-none text-gray-900">
+                    <button type="submit" class="bg-indigo-700 text-white px-6 py-3 rounded-r-md hover:bg-indigo-800 transition duration-300">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Browse by Category</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Select a category that matches your interests</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 ">
+                <a href="#" class="category-card bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl fade-in-up">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-code text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Programming</h3>
+                    <p class="text-gray-600 text-sm">120+ Courses</p>
+                </a>
+                
+                <a href="#" class="category-card bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl fade-in-up">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Business</h3>
+                    <p class="text-gray-600 text-sm">80+ Courses</p>
+                </a>
+                
+                <a href="#" class="category-card bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl fade-in-up">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paint-brush text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Design</h3>
+                    <p class="text-gray-600 text-sm">65+ Courses</p>
+                </a>
+                
+                <a href="#" class="category-card bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl fade-in-up">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-speaker text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Mobile</h3>
+                    <p class="text-gray-600 text-sm">45+ Courses</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses -->
+    <section class="py-16 section-courses">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-12">
+                <div class="fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Courses</h2>
+                    <p class="text-gray-600">Most enrolled courses by our students</p>
+                </div>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">View all →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                <!-- Course 1 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a06bf2ea-d4b0-4651-8882-0fce2b18aab2.png" alt="Web development course cover showing code editor with HTML, CSS and JavaScript code" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Programming</span>
+                            <span class="text-sm text-gray-500">4.8 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Complete Web Development Bootcamp</h3>
+                        <p class="text-gray-600 text-sm mb-4">Build websites, web apps, and APIs from scratch with HTML, CSS, JavaScript, and modern frameworks.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$99.99</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700 transition duration-300">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d13d52b-e20d-4444-835d-abed6ac4b164.png" alt="Data science course cover showing charts, graphs and machine learning algorithms visualization" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Data Science</span>
+                            <span class="text-sm text-gray-500">4.9 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Mastering Data Science & AI</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn Python, Machine Learning, and Data Visualization from industry experts.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$129.99</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700 transition duration-300">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63c144f8-3188-4f8d-ae71-8a02aa512d4d.png" alt="Digital marketing course cover showing social media icons, analytics dashboard and graphs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Marketing</span>
+                            <span class="text-sm text-gray-500">4.7 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Digital Marketing Masterclass</h3>
+                        <p class="text-gray-600 text-sm mb-4">Grow your business with proven marketing strategies including SEO, social media, and content marketing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$89.99</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700 transition duration-300">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 4 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a06bf2ea-d4b0-4651-8882-0fce2b18aab2.png" alt="Mobile App Development with Flutter" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Programming</span>
+                            <span class="text-sm text-gray-500">4.8 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Mobile App Development with Flutter</h3>
+                        <p class="text-gray-600 text-sm mb-4">Build cross-platform apps for Android & iOS using Flutter and Dart. Learn UI design, state management, API integration, and app deployment—all in one course.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$99.99</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700 transition duration-300">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d13d52b-e20d-4444-835d-abed6ac4b164.png" alt="Data science course cover showing charts, graphs and machine learning algorithms visualization" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Data Science</span>
+                            <span class="text-sm text-gray-500">4.9 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AI & Machine Learning</h3>
+                        <p class="text-gray-600 text-sm mb-4">Master the basics of AI and ML, from data handling to model building. Learn algorithms, Python, and real-world applications to create intelligent solutions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$129.99</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700 transition duration-300">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63c144f8-3188-4f8d-ae71-8a02aa512d4d.png" alt="Digital marketing course cover showing social media icons, analytics dashboard and graphs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Business</span>
+                            <span class="text-sm text-gray-500">4.7 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Financial Management for Business</h3>
+                        <p class="text-gray-600 text-sm mb-4">Understand budgeting, accounting, and financial decision-making to manage money wisely.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$89.99</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700 transition duration-300">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Levels -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Courses for All Levels</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find the perfect course no matter your experience level</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Beginner -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <div class="bg-indigo-600 text-white p-6">
+                        <h3 class="text-xl font-bold">Beginner</h3>
+                        <p class="text-indigo-100">Perfect for those just starting out</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> No prior experience needed</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Step-by-step guidance</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Foundational concepts</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Hands-on practice</li>
+                        </ul>
+                        <a href="#" class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">Browse Beginner Courses</a>
+                    </div>
+                </div>
+                
+                <!-- Intermediate -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <div class="bg-purple-600 text-white p-6">
+                        <h3 class="text-xl font-bold">Intermediate</h3>
+                        <p class="text-purple-100">For those looking to build on existing skills</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Some experience required</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Advanced concepts</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Real-world projects</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Career-focused learning</li>
+                        </ul>
+                        <a href="#" class="block text-center bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition duration-300">Browse Intermediate Courses</a>
+                    </div>
+                </div>
+                
+                <!-- Advanced -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md fade-in-up">
+                    <div class="bg-gray-900 text-white p-6">
+                        <h3 class="text-xl font-bold">Advanced</h3>
+                        <p class="text-gray-300">For professionals and experts</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Extensive experience required</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cutting-edge topics</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Industry best practices</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Leadership skills</li>
+                        </ul>
+                        <a href="#" class="block text-center bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300">Browse Advanced Courses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Instructors -->
+    <section class="py-16 instructors-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Learn from the Best</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our instructors are industry experts with real-world experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="instructor-card bg-white p-6 rounded-xl shadow-md text-center fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77eb783e-c355-4d69-8c61-f9a13ff7f8a5.png" alt="Portrait of Sarah Johnson, web development instructor" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-bold mb-1">Sarah Johnson</h3>
+                    <p class="text-gray-600 text-sm mb-3">Senior Web Developer</p>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">12 Courses • 10,000+ Students</p>
+                </div>
+                
+                <div class="instructor-card bg-white p-6 rounded-xl shadow-md text-center fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f26a935-a6d4-4634-b471-ca3aedcb4657.png" alt="Portrait of Michael Chen, data science instructor" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-bold mb-1">Michael Chen</h3>
+                    <p class="text-gray-600 text-sm mb-3">Data Science Lead</p>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">8 Courses • 7,500+ Students</p>
+                </div>
+                
+                <div class="instructor-card bg-white p-6 rounded-xl shadow-md text-center fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f617ee01-bf10-4eb6-a63b-85a64322f1bf.png" alt="Portrait of Emily Rodriguez, UX design instructor" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-bold mb-1">Emily Rodriguez</h3>
+                    <p class="text-gray-600 text-sm mb-3">UX Design Director</p>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">6 Courses • 5,200+ Students</p>
+                </div>
+                
+                <div class="instructor-card bg-white p-6 rounded-xl shadow-md text-center fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d13d52b-e20d-4444-835d-abed6ac4b164.png" alt="Portrait of David Wilson, digital marketing instructor" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-bold mb-1">David Wilson</h3>
+                    <p class="text-gray-600 text-sm mb-3">Marketing Consultant</p>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">9 Courses • 8,000+ Students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Benefits -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in-up">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">What You'll Get From Our <span style="background: linear-gradient(90deg , #be83fe, #fc7aea); color: white; font-family: Edu NSW ACT Cursive, cursive; font-size: 25px;">Courses</span></h2>
+                    
+                    <div class="space-y-6 fade-in-up">
+                        <div class="flex">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">Industry-Recognized Certificates</h3>
+                                <p class="text-gray-600">Earn certificates to showcase your new skills to employers and your professional network.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <i class="fas fa-project-diagram text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">Hands-On Projects</h3>
+                                <p class="text-gray-600">Apply what you learn with real-world projects to build an impressive portfolio.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <i class="fas fa-comment-dots text-indigo-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">Community Support</h3>
+                                <p class="text-gray-600">Get help from instructors and peers in our active student community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-up">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d1501d0-7c40-4ba7-ae8a-6df76dc1963e.png" alt="Student enjoying online learning with laptop and notebook, smiling while watching a course video" class="rounded-xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 text-white cta">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6 fade-in-up">Ready to Start Learning?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto fade-in-up">Join thousands of students who have transformed their lives with our courses. Start your learning journey today.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-lg transition duration-300">Get Started for Free</a>
+                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-md font-bold text-lg transition duration-300">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">EduSphere</h3>
+                    <p class="mb-4">Empowering your learning journey with high-quality online education.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white">Data Science</a></li>
+                        <li><a href="#" class="hover:text-white">Mobile Development</a></li>
+                        <li><a href="#" class="hover:text-white">UX/UI Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Courses</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Community</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 EduSphere. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Track which course cards have been hovered
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'rotateY(10deg) scale(1.03)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'rotateY(0) scale(1)';
+            });
+        });
+        
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const menu = document.querySelector('.md\\:hidden + .hidden.md\\:flex');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        });
+    </script>
+    
+</body>
+<script src="javascript/script.js"></script>
+</html>

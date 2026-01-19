@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • EduSphere</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+  
+  <style>
+    :root{
+      --accent-from:#ae67fa;
+      --accent-to:#f576e5;
+    }
+    body { 
+      -webkit-font-smoothing:antialiased;
+       -moz-osx-font-smoothing:grayscale; 
+       font-family: "Lexend", sans-serif;
+      
+      }
+    /* Floating label */
+    .field { 
+      position:relative;
+     }
+    .field label {
+      position:absolute;
+      left:12px;
+      top:12px;
+      transform-origin:left top;
+      transition: transform .18s ease, color .18s ease, top .18s ease;
+      pointer-events:none;
+      color:rgba(15,23,42,.6);
+    }
+    .field input:focus + label,
+    .field textarea:focus + label,
+    .field input:not(:placeholder-shown) + label,
+    .field textarea:not(:placeholder-shown) + label {
+      transform: translateY(-14px) scale(.85);
+      color:rgba(99,102,241,1);
+      top:6px;
+    }
+
+    /* subtle card tilt on hover */
+    .tilt:hover { transform: translateY(-8px) rotateX(2deg); box-shadow: 0 22px 60px rgba(2,6,23,.12); }
+    .tilt { transition: transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .35s; }
+
+    /* animate icons (pulse) */
+    .pulse-on-open { animation: pulse 2.2s infinite; }
+    @keyframes pulse {
+      0%{ transform: scale(1); opacity:1 }
+      50%{ transform: scale(1.06); opacity:.85 }
+      100%{ transform: scale(1); opacity:1 }
+    }
+
+    /* input focus ring custom */
+    input:focus, textarea:focus, select:focus { box-shadow: 0 0 0 4px rgba(174,103,250,.12) !important; outline: none; }
+
+  
+
+    /* small responsive tweak to ensure hero svg scales nicely */
+    @media (max-width:640px){ .hero-illus { display:none; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar sticky top-2 z-50" id="navbar" style="background-color: #fffaff; width: 90%; margin: 0 auto; border-radius: 20px; padding: 10px 0px 10px 0px;">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex justify-between  h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/db2b2d12-192f-4a84-a58c-b0d0b05b8083.png" alt="EduSphere logo featuring a purple graduation cap with a globe inside representing global learning" class="h-8 w-auto">
+                        <span class="ml-2 text-3xl font-bold text-gray-900">EduSphere</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a>
+                    <a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a>
+                    <a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a>
+                    <a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="sign.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Sign In</a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none" id="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+ 
+     <!-- Sidebar (Mobile Menu) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-72 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40" style="z-index: 100;">
+    <!-- Sidebar Header -->
+    <div class="p-6 flex items-center justify-between" style="background: linear-gradient(90deg, #ae67fa, #f576e5);">
+      <h2 class="text-white text-xl font-bold">EduSphere</h2>
+      <button id="close-btn" class="text-white focus:outline-none">
+        ✕
+      </button>
+    </div>
+
+    <!-- Sidebar Content -->
+    <div class="p-6">
+      <!-- Website image / About preview -->
+      <div class="mb-6">
+        <img src="images/ChatGPT Image Sep 8, 2025, 12_43_27 PM.png" alt="EduSphere" class="rounded-lg shadow">
+        <p class="mt-3 text-sm text-gray-600">Your smart companion for learning, tips, and resources.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="space-y-4 text-gray-800 font-medium">
+                 <li><a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a></li> 
+                    <li><a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a></li>
+                    <li><a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a></li>
+                    <li><a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+
+  <!-- HERO -->
+  <section class=" mx-auto px-6 py-24 grid md:grid-cols-1 gap-8 items-center text-center" style="background: linear-gradient(90deg, #ae67fa, #f576e5); border-radius: 20px; margin: 20px; ">
+    <div>
+      <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-gradient-to-r from-pink-400 to-white mb-4">
+        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none"><path d="M12 6l-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V6H12z" fill="white"/></svg>
+        <span class="text-sm text-black/90">Contact • EduSphere</span>
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight font-bold mb-6 fade-in-up" style="font-family: 'Lexend', sans-serif;">We're here to help — ask anything</h1>
+      <p class="mt-4 text-slate-200 max-w-xxl text-center fade-in-up">Questions about EduSphere resources, partnerships or technical support? Send us a message and we’ll respond within one business day.</p>
+
+      <div class="mt-8 gap-3 content-center fade-in-up">
+        <button id="openMap" class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-white shadow hover:scale-[1.02] transition">
+          <i class="fa fa-map-marked-alt"></i> View Location
+        </button>
+
+        <a href="#contactForm" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-white text-slate-800 hover:shadow-sm">
+          <i class="fa fa-paper-plane text-indigo-500"></i> Send message
+        </a>
+      </div>
+
+      <!-- trust badges -->
+      <!-- <div class="mt-8 flex items-center gap-4 text-xs text-slate-500">
+        <div class="flex items-center gap-2">
+          <i class="fa fa-shield-check text-green-500"></i> Secure
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa fa-clock text-slate-400"></i> Response in 24h
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa fa-book text-slate-400"></i> Resources & guides
+        </div>
+      </div>
+    </div> -->
+
+    <!-- hero illustration -->
+    <!-- <div class="hero-illus">
+      <div class="w-full h-64 rounded-2xl bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] tilt flex items-center justify-center text-white shadow-lg">
+        
+        <svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="0" y="0" width="320" height="200" rx="16" fill="url(#g)" />
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#ae67fa"/>
+              <stop offset="1" stop-color="#f576e5"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(32,36)" opacity="0.98">
+            <rect x="0" y="0" width="200" height="110" rx="12" fill="white" opacity="0.06"/>
+            <g transform="translate(16,14)" fill="white" opacity="0.95">
+              <rect x="0" y="0" width="96" height="14" rx="6"/>
+              <rect x="0" y="26" width="160" height="10" rx="5"/>
+              <rect x="0" y="44" width="120" height="10" rx="5"/>
+              <rect x="0" y="64" width="88" height="10" rx="5"/>
+            </g>
+            <circle cx="180" cy="32" r="20" fill="white" opacity="0.12"/>
+            <path d="M150 88 L190 120 L130 120 Z" fill="white" opacity="0.12"/>
+          </g>
+        </svg>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- MAIN CONTENT: Form + details -->
+  <main class="max-w-6xl mx-auto px-6 pb-16 grid md:grid-cols-3 gap-8">
+
+    <!-- Form (main) -->
+    <section id="contactForm" class="md:col-span-2 fade-in-up">
+      <div class="bg-white rounded-2xl shadow-lg p-8 tilt">
+        <div class="flex items-start justify-between">
+          <div>
+            <h2 class="text-2xl font-semibold">Send us a message</h2>
+            <p class="mt-1 text-sm text-slate-500">Use the form below for general inquiries, support or partnership requests.</p>
+          </div>
+          <div class="text-sm text-slate-400">All fields are required</div>
+        </div>
+
+        <form id="contact" class="mt-6 grid gap-4">
+          <!-- Name -->
+          <div class="field">
+            <input id="name" name="name" type="text" placeholder=" " required class="w-full border border-slate-200 rounded-lg px-4 py-3 bg-transparent" aria-describedby="nameHelp" />
+            <label for="name">Full name</label>
+            <div id="nameHelp" class="sr-only">Enter your full name</div>
+          </div>
+
+          <!-- Email + Phone -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="field">
+              <input id="email" name="email" type="email" placeholder=" " required class="w-full border border-slate-200 rounded-lg px-4 py-3" />
+              <label for="email">Email address</label>
+            </div>
+            <div class="field">
+              <input id="phone" name="phone" type="tel" placeholder=" " class="w-full border border-slate-200 rounded-lg px-4 py-3" />
+              <label for="phone">Phone (optional)</label>
+            </div>
+          </div>
+
+          <!-- Subject -->
+          <div class="field">
+            <select id="subject" name="subject" class="w-full border border-slate-200 rounded-lg px-4 py-3 bg-white">
+              <option value="">Select subject</option>
+              <option>General inquiry</option>
+              <option>Support</option>
+              <option>Partnership</option>
+              <option>Report a bug</option>
+            </select>
+            <label for="subject">Subject</label>
+          </div>
+
+          <!-- Message -->
+          <div class="field">
+            <textarea id="message" name="message" placeholder=" " rows="6" required class="w-full border border-slate-200 rounded-lg px-4 py-3 resize-y"></textarea>
+            <label for="message">Your message</label>
+          </div>
+
+          <!-- attachments (optional) -->
+          <div class="flex items-center gap-3">
+            <label class="inline-flex items-center gap-3 px-3 py-2 bg-slate-100 rounded-lg cursor-pointer">
+              <i class="fa fa-paperclip text-slate-600"></i>
+              <span class="text-sm text-slate-600">Attach file</span>
+              <input id="file" type="file" class="hidden" />
+            </label>
+
+            <div class="text-xs text-slate-400">Allowed: PNG, JPG, PDF — max 5MB</div>
+          </div>
+
+          <!-- submission controls -->
+          <div class="flex items-center gap-4 mt-2">
+            <button id="submitBtn" type="button" class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-white font-semibold shadow">
+              <i class="fa fa-paper-plane"></i><span>Send message</span>
+            </button>
+
+            <div id="status" class="text-sm text-slate-500">Or email us at <a href="mailto:support@edusphere.com" class="text-indigo-600 underline">support@edusphere.com</a></div>
+          </div>
+
+          <!-- success area -->
+          <div id="response" class="hidden mt-4 p-4 rounded-lg bg-emerald-50 border border-emerald-100">
+            <div class="flex items-center gap-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" class="text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path id="check" class="check" d="M20 6L9 17l-5-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <div>
+                <div class="font-semibold text-emerald-800">Message sent</div>
+                <div class="text-sm text-emerald-700" id="respText">Thanks — we'll get back to you soon.</div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+        <details class="bg-white rounded-xl p-4 shadow">
+          <summary class="font-semibold leading-6 cursor-pointer">How long until I get a reply?</summary>
+          <p class="mt-2 text-sm text-slate-600">We aim to reply within 24 business hours. Partnership inquiries may take a bit longer.</p>
+        </details>
+        <details class="bg-white rounded-xl p-4 shadow">
+          <summary class="font-semibold leading-6 cursor-pointer">Can I request custom resources?</summary>
+          <p class="mt-2 text-sm text-slate-600">Yes — drop a partnership or custom resource request and our team will evaluate feasibility.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Sidebar: contact details + socials -->
+    <aside class="space-y-6 fade-in-up">
+      <div class="bg-white p-6 rounded-2xl shadow tilt">
+        <h3 class="text-lg font-semibold">Contact information</h3>
+        <p class="text-sm text-slate-500 mt-2">Prefer direct contact? Use these options.</p>
+
+        <ul class="mt-4 space-y-4">
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-indigo-50 text-indigo-600">
+              <i class="fa fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <div class="text-sm font-semibold">Office</div>
+              <div class="text-xs text-slate-500">Karachi, Pakistan (Online platform)</div>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-rose-50 text-rose-600">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div>
+              <div class="text-sm font-semibold">Phone</div>
+              <a href="tel:+923001234567" class="text-xs text-slate-500">+92 300 1234567</a>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-green-50 text-green-600">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <div>
+              <div class="text-sm font-semibold">Email</div>
+              <a href="mailto:support@edusphere.com" class="text-xs text-slate-500">support@edusphere.com</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-6">
+          <div class="text-xs text-slate-400">Follow us</div>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-md flex items-center justify-center bg-indigo-50 text-indigo-600 hover:scale-105 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-md flex items-center justify-center bg-blue-50 text-blue-600 hover:scale-105 transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="w-10 h-10 rounded-md flex items-center justify-center bg-pink-50 text-pink-600 hover:scale-105 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 rounded-md flex items-center justify-center bg-red-50 text-red-600 hover:scale-105 transition"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- small CTA -->
+      <div class="bg-gradient-to-r from-[var(--accent-from)] to-[var(--accent-to)] text-white p-5 rounded-2xl shadow tilt">
+        <h4 class="font-semibold">Need resources fast?</h4>
+        <p class="text-sm mt-2">Sign up and get a tailored study plan delivered to your inbox.</p>
+        <div class="mt-4">
+          <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[var(--accent-from)] font-semibold">Get study plan</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Map Modal -->
+  <div id="mapModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+    <div class="w-[92%] md:w-3/4 bg-white rounded-xl overflow-hidden shadow-lg">
+      <div class="p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+            <i class="fa fa-map-marked-alt"></i>
+          </div>
+          <div>
+            <div class="font-semibold">Where to find us</div>
+            <div class="text-xs text-slate-500">Karachi, Pakistan</div>
+          </div>
+        </div>
+        <button id="closeMap" class="p-2 text-slate-600">✕</button>
+      </div>
+      <div class="h-72 md:h-96">
+        <!-- Google map embed -- replace src if you have exact coordinates -->
+        <iframe class="w-full h-full" frameborder="0" loading="lazy"
+          src="https://www.google.com/maps?q=Karachi,+Pakistan&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (simple) -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+    <div id="mobileMenuOverlay" class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-72 bg-white shadow-lg p-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--accent-from)] to-[var(--accent-to)] text-white flex items-center justify-center">E</div>
+          <div>
+            <div class="font-bold">EduSphere</div>
+            <div class="text-xs text-slate-500">Knowledge hub</div>
+          </div>
+        </div>
+        <button id="closeMobile" class="text-slate-600">✕</button>
+      </div>
+
+      <nav class="mt-6 space-y-4">
+        <a href="#" class="block py-2 text-slate-700 font-medium">Home</a>
+        <a href="#" class="block py-2 text-slate-700 font-medium">Knowledge Hub</a>
+        <a href="#" class="block py-2 text-slate-700 font-medium">Courses</a>
+        <a href="#" class="block py-2 text-slate-700 font-medium">Contact</a>
+      </nav>
+
+      <div class="mt-6">
+        <div class="text-xs text-slate-500">Contact</div>
+        <div class="mt-2 text-sm">support@edusphere.com</div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">EduSphere</h3>
+                    <p class="mb-4">Empowering your learning journey with high-quality online education.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white">Data Science</a></li>
+                        <li><a href="#" class="hover:text-white">Mobile Development</a></li>
+                        <li><a href="#" class="hover:text-white">UX/UI Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Courses</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Community</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 EduSphere. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- Scripts: UI interactions, validation, fake submit -->
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Mobile menu controls
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobile = document.getElementById('closeMobile');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+    mobileMenuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeMobile?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    mobileMenuOverlay?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+    // Map modal
+    const openMapBtn = document.getElementById('openMap');
+    const mapModal = document.getElementById('mapModal');
+    const closeMap = document.getElementById('closeMap');
+    openMapBtn?.addEventListener('click', () => mapModal.classList.remove('hidden'));
+    closeMap?.addEventListener('click', () => mapModal.classList.add('hidden'));
+    mapModal?.addEventListener('click', (e) => { if (e.target === mapModal) mapModal.classList.add('hidden'); });
+
+    // File input label (optional)
+    const fileInput = document.getElementById('file');
+    fileInput?.addEventListener('change', () => {
+      if (fileInput.files.length) {
+        const label = fileInput.closest('label');
+        label.querySelector('span').textContent = fileInput.files[0].name;
+      }
+    });
+
+    // Form: simple validation + animated submit (fake request)
+    const submitBtn = document.getElementById('submitBtn');
+    const form = document.getElementById('contact');
+    const responseBox = document.getElementById('response');
+    const checkPath = document.getElementById('check');
+
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subj = document.getElementById('subject').value;
+      const msg = document.getElementById('message').value.trim();
+      if (!name || !email || !subj || !msg) return false;
+      // basic email regex
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    submitBtn.addEventListener('click', () => {
+      // disable while processing
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+      if (!validateForm()) {
+        alert('Please complete all required fields with a valid email.');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-80','cursor-not-allowed');
+        return;
+      }
+
+      // show in-progress microinteraction
+      const spinner = document.createElement('span');
+      spinner.className = 'w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin';
+      submitBtn.prepend(spinner);
+
+      // simulate network call (replace with actual fetch to your API)
+      setTimeout(() => {
+        spinner.remove();
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-80','cursor-not-allowed');
+
+        // show success block with animated check
+        responseBox.classList.remove('hidden');
+        setTimeout(()=>{ document.querySelector('.check').classList.add('show'); }, 80);
+
+        // reset form lightly (keep email for convenience)
+        //form.reset(); // uncomment to clear form
+        document.getElementById('respText').textContent = 'Thanks — we received your message and will reply shortly.';
+        // small focus to success
+        responseBox.scrollIntoView({behavior:'smooth', block:'center'});
+      }, 1100);
+    });
+
+    // keyboard accessibility: ESC closes map and mobile menu
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        mapModal.classList.add('hidden');
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+    <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

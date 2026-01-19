@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSphere - Online Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+   
+</head>
+<body>
+      <!-- Navbar -->
+    <nav class="navbar sticky top-2 z-50" id="navbar" style="background-color: #fffaff; width: 90%; margin: 0 auto; border-radius: 20px; padding: 10px 0px 10px 0px;">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex justify-between  h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/db2b2d12-192f-4a84-a58c-b0d0b05b8083.png" alt="EduSphere logo featuring a purple graduation cap with a globe inside representing global learning" class="h-8 w-auto">
+                        <span class="ml-2 text-3xl font-bold text-gray-900">EduSphere</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a>
+                    <a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a>
+                    <a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a>
+                    <a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a>
+                    <a href="event-details.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Event Details</a>
+                    <a href="event-calendar.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Event Calendar</a>
+
+                </div>
+                <div class="flex items-center">
+                    <a href="sign.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Sign In</a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none" id="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+ 
+     <!-- Sidebar (Mobile Menu) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-72 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40" style="z-index: 100;">
+    <!-- Sidebar Header -->
+    <div class="p-6 flex items-center justify-between" style="background: linear-gradient(90deg, #ae67fa, #f576e5);">
+      <h2 class="text-white text-xl font-bold">EduSphere</h2>
+      <button id="close-btn" class="text-white focus:outline-none">
+        ✕
+      </button>
+    </div>
+
+    <!-- Sidebar Content -->
+    <div class="p-6">
+      <!-- Website image / About preview -->
+      <div class="mb-6">
+        <img src="images/ChatGPT Image Sep 8, 2025, 12_43_27 PM.png" alt="EduSphere" class="rounded-lg shadow">
+        <p class="mt-3 text-sm text-gray-600">Your smart companion for learning, tips, and resources.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="space-y-4 text-gray-800 font-medium">
+                 <li><a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a></li> 
+                    <li><a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a></li>
+                    <li><a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a></li>
+                    <li><a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-black text-center sm:text-left fade-in-up"><span style="color: white; background-color: #f576e5; padding: 3px; border-radius: 10px;font-family: Edu NSW ACT Cursive, cursive; font-size: 28px; flex-direction: row;">Master</span>New Skills With <span style="background: linear-gradient(90deg, #ae67fa, #f576e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Online Courses</span></h1>
+                    <p class="text-lg mb-8 max-w-lg text-gray-500 text-center sm:text-left fade-in-up">Learn from industry experts with our 1000+ courses in programming, design, business, and more. Build skills for today and tomorrow.</p>
+                    <div class="flex space-x-4 justify-center md:justify-start fade-in-up">
+                        <a href="#" class="bg-white text-white-600 hover:bg-gray-100 px-6 py-3 rounded-md font-bold transition duration-300" style="background: linear-gradient(90deg, #ae67fa, #f576e5);">Explore Courses</a>
+                        <a href="#" class="border-2 border-white text-pink-600 bg-white hover:text-indigo-600 px-6 py-3 rounded-md font-medium transition duration-300 shadow-md">Free Trial</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center floating-animation fade-in-up">
+                    <img src="images/home-hero.jpg" alt="Happy diverse students studying together online with laptops and notebooks showing collaborative learning environment" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="logo-slider">
+  <div class="logo-track">
+
+    <img src="images/duolingo-logo.png" alt="Duolingo" style="height: 30px !important;">
+    <img src="images/meta-logo.png" alt="Meta" style="height: 90px !important;">
+    <img src="images/microsoft-logo.png" alt="Microsoft">
+    <img src="images/ibm-logo.png" alt="ibm" style="height: 30px !important;">
+    
+
+    <!-- Duplicate for continuous loop -->
+    <img src="images/duolingo-logo.png" alt="Duolingo" style="height: 30px !important;">
+    <img src="images/meta-logo.png" alt="Meta" style="height: 90px !important;">
+    <img src="images/microsoft-logo.png" alt="Microsoft">
+    <img src="images/ibm-logo.png" alt="ibm" style="height: 30px !important;">
+
+  </div>
+</div>
+
+<style>
+     .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #fffaff;
+            padding: 40px 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 60px;
+            }
+        }
+
+        .image-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+            border-radius: 20px;
+            background-color: #f576e5;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out;
+           
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-item {
+            position: relative;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+
+
+
+        .content-section {
+            margin-top: 40px;
+            text-align: left;
+            padding-left: 30px;
+            
+        }
+
+        .content-section h2 {
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #8A2BE2;
+            margin-bottom: 20px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .benefit-item .icon {
+            font-size: 2em;
+            color: #8A2BE2;
+            margin-right: 15px;
+            line-height: 1;
+            padding-top: 5px;
+        }
+
+        .benefit-item .text h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 0;
+            color: #8A2BE2;
+        }
+
+        .benefit-item .text p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin: 5px 0 0;
+            color: #333;
+        }
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 200px;
+        }
+        .image-container img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        @media (max-width: 1300px) {
+            .image-container {
+                margin-left: 0px !important;
+            }
+        }
+        @media (max-width: 768px) {
+           .image-container img {
+            width: 70% !important;
+           }
+        }
+</style>
+     <!-- Benefits Section  -->
+<div class="container justify-center">
+      <div class="image-container fade-in-up">
+        <img src="images/custom-3.png" alt="Online Learning Benefits section with four portraits">
+    </div>
+
+    <div class="content-section"  >
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-left text-gray-900 mb-4 fade-in-up"><span style="color: white; background-color: #f576e5; padding: 5px; border-radius: 10px;font-family: Edu NSW ACT Cursive, cursive; font-size: 24px; flex-direction: row;">Benefits</span> From Our Online Learning</h1>
+        </div> 
+        
+        <div class="benefit-item fade-in-up" >
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#9B5278"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg></span>
+            <div class="text">
+                <h3>Online Degrees</h3>
+                <p>Earn accredited degrees from the comfort of your home, opening doors to a world of possibilities.</p>
+            </div>
+        </div>
+
+        <div class="benefit-item fade-in-up">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="M440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6q47 0 91.5 10.5T440-278Zm40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q74 0 126 17t112 52q11 6 16.5 14t5.5 21v418q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-481q15 5 29.5 11t28.5 14q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59Zm140-240v-440l120-40v440l-120 40Zm-340-99Z"/></svg></span>
+            <div class="text">
+                <h3>Short Courses</h3>
+                <p>Enhance your skills with our concise and focused short courses, designed for quick and effective learning.</p>
+            </div>
+        </div>
+
+        <div class="benefit-item fade-in-up">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#634FA2"><path d="m280-620 80-80-80-80-80 80 80 80Zm200-40ZM160-400q-33 0-56.5-23.5T80-480v-360q0-33 23.5-56.5T160-920h640q33 0 56.5 23.5T880-840v360q0 33-23.5 56.5T800-400H671q6-20 8-40t0-40h121v-360H160v360h121q-2 20 0 40t8 40H160Zm500-280q25 0 42.5-17.5T720-740q0-25-17.5-42.5T660-800q-25 0-42.5 17.5T600-740q0 25 17.5 42.5T660-680ZM200-40v-84q0-35 19.5-65t51.5-45q49-23 102-34.5T480-280q54 0 107 11.5T689-234q32 15 51.5 45t19.5 65v84H200Zm80-80h400v-4q0-12-7-22t-18-15q-42-19-86-29t-89-10q-45 0-89 10t-86 29q-11 5-18 15t-7 22v4Zm200-200q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T540-460q0-25-17.5-42.5T480-520q-25 0-42.5 17.5T420-460q0 25 17.5 42.5T480-400Zm0-60Zm0 340Z"/></svg></span>
+            <div class="text">
+                <h3>Training From Experts</h3>
+                <p>Immerse yourself in knowledge with industry experts guiding you through hands-on experience.</p>
+            </div>
+        </div>
+
+        <div class="benefit-item fade-in-up">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fd6bff"><path d="m380-300 280-180-280-180v360ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg></span>
+            <div class="text">
+                <h3>1.5k+ Video Courses</h3>
+                <p>Dive into a vast library of over 1.5k video courses covering many subjects, offering a visual learning experience.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Featured Courses Slider -->
+    <section class="py-16 feauture-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold text-white mb-4 fade-in-up">Featured Courses</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto fade-in-up">Discover our most popular courses taught by world-class instructors</p>
+            </div>
+            
+            <div class="relative">
+                <div class="flex overflow-x-auto pb-6 space-x-6 scroll-smooth" id="slider">
+                    <!-- Slider Item 1 -->
+                    <div class="flex-shrink-0 w-72 bg-white rounded-xl overflow-hidden shadow-md slider-card fade-in-up">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a06bf2ea-d4b0-4651-8882-0fce2b18aab2.png" alt="Web development course cover showing code editor with HTML, CSS and JavaScript code" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Programming</span>
+                                <span class="text-sm text-gray-500">4.8 <i class="fas fa-star text-yellow-400"></i></span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Complete Web Development Bootcamp</h3>
+                            <p class="text-gray-600 text-sm mb-4">Build websites, web apps, and APIs from scratch</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">$99.99</span>
+                                <button class="text-sm text-indigo-600 hover:text-indigo-800">Enroll Now →</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Item 2 -->
+                    <div class="flex-shrink-0 w-72 bg-white rounded-xl overflow-hidden shadow-md slider-card fade-in-up">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d13d52b-e20d-4444-835d-abed6ac4b164.png" alt="Data science course cover showing charts, graphs and machine learning algorithms visualization" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Data Science</span>
+                                <span class="text-sm text-gray-500">4.9 <i class="fas fa-star text-yellow-400"></i></span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Mastering Data Science & AI</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn Python, Machine Learning, and Data Visualization</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">$129.99</span>
+                                <button class="text-sm text-indigo-600 hover:text-indigo-800">Enroll Now →</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Item 3 -->
+                    <div class="flex-shrink-0 w-72 bg-white rounded-xl overflow-hidden shadow-md slider-card fade-in-up">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63c144f8-3188-4f8d-ae71-8a02aa512d4d.png" alt="Digital marketing course cover showing social media icons, analytics dashboard and graphs" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Marketing</span>
+                                <span class="text-sm text-gray-500">4.7 <i class="fas fa-star text-yellow-400"></i></span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Digital Marketing Masterclass</h3>
+                            <p class="text-gray-600 text-sm mb-4">Grow your business with proven marketing strategies</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">$89.99</span>
+                                <button class="text-sm text-indigo-600 hover:text-indigo-800">Enroll Now →</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Item 4 -->
+                    <div class="flex-shrink-0 w-72 bg-white rounded-xl overflow-hidden shadow-md slider-card fade-in-up">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a01fa897-9fa6-4bf9-9eaf-45680ec4325c.png" alt="Mobile app development course cover showing smartphone with App Store screenshot" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">Mobile</span>
+                                <span class="text-sm text-gray-500">4.8 <i class="fas fa-star text-yellow-400"></i></span>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Flutter App Development</h3>
+                            <p class="text-gray-600 text-sm mb-4">Build cross-platform mobile apps with Google's Flutter</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">$109.99</span>
+                                <button class="text-sm text-indigo-600 hover:text-indigo-800">Enroll Now →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hidden md:block fade-in-up" id="slider-prev">
+                    <i class="fas fa-chevron-left text-indigo-600"></i>
+                </button>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hidden md:block fade-in-up" id="slider-next">
+                    <i class="fas fa-chevron-right text-indigo-600"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- 3D Flipping Cards Section -->
+    <section class="py-16 path-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Popular Learning Paths</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose your career path and master the skills you need</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-up">
+                <!-- Card 1 -->
+                <div class="course-card" onclick="flipCard(this)">
+                    <div class="course-front bg-white rounded-xl overflow-hidden shadow-md h-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb8f54f1-7758-4c9d-8908-fc3fd80a282b.png" alt="Frontend development path showing web design elements and responsive layouts" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Frontend Developer</h3>
+                            <p class="text-gray-600 mb-4">Master HTML, CSS, JavaScript, and modern frameworks to build responsive web interfaces.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">8 Courses</span>
+                                <span class="text-sm text-indigo 600">Click to see more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-back absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl p-6 text-white flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-4">Frontend Developer Path</h3>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>HTML5 & CSS3 Fundamentals</li>
+                            <li>JavaScript & ES6+</li>
+                            <li>React.js & Vue.js</li>
+                            <li>Responsive Design</li>
+                            <li>Build Portfolio Projects</li>
+                        </ul>
+                        <button class="bg-white text-indigo-600 hover:bg-gray-100 px-4 py-2 rounded-md font-medium mt-auto">Get Started</button>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="course-card" onclick="flipCard(this)">
+                    <div class="course-front bg-white rounded-xl overflow-hidden shadow-md h-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1851f639-9c29-4ef1-9aac-355a0facf7e0.png" alt="Backend development path showing server architecture and database diagrams" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Backend Developer</h3>
+                            <p class="text-gray-600 mb-4">Learn server-side development, databases, and API design to power web applications.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">10 Courses</span>
+                                <span class="text-sm text-indigo-600">Click to see more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-back absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600 rounded-xl p-6 text-white flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-4">Backend Developer Path</h3>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>Node.js & Express</li>
+                            <li>Python & Django</li>
+                            <li>Databases (SQL & NoSQL)</li>
+                            <li>RESTful APIs</li>
+                            <li>Authentication & Security</li>
+                        </ul>
+                        <button class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-medium mt-auto">Get Started</button>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="course-card" onclick="flipCard(this)">
+                    <div class="course-front bg-white rounded-xl overflow-hidden shadow-md h-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bd57ee0-62f8-4383-80f6-a52148c82800.png" alt="UX/UI design path showing design tools, wireframes and color palettes" class="w-full h-40 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">UX/UI Designer</h3>
+                            <p class="text-gray-600 mb-4">Design beautiful, intuitive interfaces with user experience principles and tools.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-indigo-600 font-bold">7 Courses</span>
+                                <span class="text-sm text-indigo-600">Click to see more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-back absolute inset-0 bg-gradient-to-br from-pink-600 to-red-600 rounded-xl p-6 text-white flex flex-col justify-center">
+                        <h3 class="text-xl font-bold mb-4">UX/UI Designer Path</h3>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>User Research Methods</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>Figma & Adobe XD</li>
+                            <li>UI Principles & Patterns</li>
+                            <li>Design Systems</li>
+                        </ul>
+                        <button class="bg-white text-pink-600 hover:bg-gray-100 px-4 py-2 rounded-md font-medium mt-auto">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Stats Section -->
+    <section class="stats-section py-1 text-white">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stats-item p-6">
+                    <div class="text-3xl font-bold mb-2">1000+</div>
+                    <div class="text-sm uppercase tracking-wider">Courses</div>
+                </div>
+                <div class="stats-item p-6">
+                    <div class="text-3xl font-bold mb-2">10K+</div>
+                    <div class="text-sm uppercase tracking-wider">Students</div>
+                </div>
+                <div class="stats-item p-6">
+                    <div class="text-3xl font-bold mb-2">500+</div>
+                    <div class="text-sm uppercase tracking-wider">Instructors</div>
+                </div>
+                <div class="stats-item p-6">
+                    <div class="text-3xl font-bold mb-2">98%</div>
+                    <div class="text-sm uppercase tracking-wider">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- teacher section  -->
+     <section class="py-16 benefits">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                
+                <div>
+                      <div class="text-align-left mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 fade-in-up">If You Are A Certified Teacher<br>Then <span style="color: #f576e5;">Become An Instructor</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto fade-in-up">Join our community of expert instructors and share your knowledge with millions of students worldwide</p>
+            </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center md:text-left fade-in-up">Why Teach With EduSphere?</h3>
+                    <ul class="list-disc list-inside space-y-3 mb-6 text-gray-600 marker:text-pink-400 marker:text-2xl sm:text-left text-center md:text-left fade-in-up">
+                        <li>Reach a global audience of motivated learners</li>
+                        <li>Earn revenue from your courses with our competitive royalty program</li>
+                        <li>Access powerful tools to create and market your courses</li>
+                        <li>Join a supportive community of fellow instructors</li>
+                    </ul>
+                    <div class="flex justify-center md:justify-start fade-in-up">
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md font-bold transition duration-300" style="background: linear-gradient(90deg, #ae67fa, #f576e5); :hover{cursor:move;}">Start Teaching Today</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/Gemini_Generated_Image_1i01k81i01k81i01.png" alt="Portrait of Sarah Johnson, web developer graduate" class="rounded-xl shadow-lg fade-in-up">
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- Features Section -->
+    <section class="py-16 why-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 fade-in-up">Why Choose EduSphere?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide the best learning experience for our students</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-box p-8 bg-white shadow-md rounded-xl">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center text-center justify-center mb-6">
+                        <i class="fas fa-chalkboard-teacher text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Instructors</h3>
+                    <p class="text-gray-600">Learn from industry professionals with real-world experience in their fields.</p>
+                </div>
+                
+                <div class="feature-box p-8 bg-white shadow-md rounded-xl">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hands-on Projects</h3>
+                    <p class="text-gray-600">Apply what you learn with practical projects and build a professional portfolio.</p>
+                </div>
+                
+                <div class="feature-box p-8 bg-white shadow-md rounded-xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certification</h3>
+                    <p class="text-gray-600">Get certified upon course completion to showcase your skills to employers.</p>
+                </div>
+                
+                <div class="feature-box p-8 bg-white shadow-md rounded-xl">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lifetime Access</h3>
+                    <p class="text-gray-600">Get lifetime access to course materials including all future updates.</p>
+                </div>
+                
+                <div class="feature-box p-8 bg-white shadow-md rounded-xl">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Community Support</h3>
+                    <p class="text-gray-600">Join our community of learners and get help from peers and mentors.</p>
+                </div>
+                
+                <div class="feature-box p-8 bg-white shadow-md rounded-xl">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Friendly</h3>
+                    <p class="text-gray-600">Learn on the go with our mobile-optimized platform and app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 testimonials-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">What Our Students Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our successful students who transformed their careers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77eb783e-c355-4d69-8c61-f9a13ff7f8a5.png" alt="Portrait of Sarah Johnson, web developer graduate" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Web Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The web development course transformed my career. Within 6 months, I landed my dream job at a tech company!"</p>
+                    <div class="text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+               
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f26a935-a6d4-4634-b471-ca3aedcb4657.png" alt="Portrait of Michael Chen, data scientist graduate" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">Data Scientist</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The depth of the data science curriculum is unmatched. I now lead a team of analysts at my company thanks to what I learned."</p>
+                    <div class="text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f617ee01-bf10-4eb6-a63b-85a64322f1bf.png" alt="Portrait of Emily Rodriguez, UX designer graduate" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">UX Designer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"As a career changer, the UX design path gave me all the tools and confidence I needed to break into this field successfully."</p>
+                    <div class="text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Learning?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of students who have transformed their lives with our courses. Start your learning journey today.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-lg transition duration-300">Get Started for Free</a>
+                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-md font-bold text-lg transition duration-300">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">EduSphere</h3>
+                    <p class="mb-4">Empowering your learning journey with high-quality online education.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white">Data Science</a></li>
+                        <li><a href="#" class="hover:text-white">Mobile Development</a></li>
+                        <li><a href="#" class="hover:text-white">UX/UI Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Courses</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Community</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 EduSphere. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+     
+    <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- check this 
+
+https://prismic.io/blog/css-scroll-effects#7-sticky-section-layout -->

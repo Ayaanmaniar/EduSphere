@@ -1,0 +1,70 @@
+  
+        /* Custom CSS for 3D effects */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #4f46e5;
+            bottom: -2px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .course-card {
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .course-card:hover {
+            transform: rotateY(10deg) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructor-card {
+            transition: all 0.3s ease;
+        }
+        
+        .instructor-card:hover {
+            transform: scale(1.05);
+        }
+    
+
+        .course-hero{
+            background: linear-gradient(90deg, #ae67fa, #ff6ceb);
+        }
+
+        .section-courses{
+            background: #fff3ff;
+        }
+
+        .instructors-section{
+            background: linear-gradient(90deg , #be83fe, #fc7aea);
+        }
+
+        .cta{
+            background: linear-gradient(90deg , #be83fe, #fc7aea);
+        }

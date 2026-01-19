@@ -1,0 +1,684 @@
+<!-- Save as knowledge-hub.html and open in browser -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduSphere — Knowledge Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/knowledge.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+
+  <!-- Tailwind (CDN for quick use). Replace with compiled CSS in production. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+            font-family: "Lexend", sans-serif;
+            overflow-x: hidden;
+            background-color: #fffaff;
+        }
+    .hover-lift { transition: transform .28s ease, box-shadow .28s ease; }
+    .hover-lift:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+    .fade-up { opacity: 0; transform: translateY(20px); transition: all .6s cubic-bezier(.2,.9,.2,1); }
+    .fade-up.revealed { opacity: 1; transform: translateY(0); }
+    /* partners track */
+    .partners-track { display:flex; gap:40px; align-items:center; animation: slide 26s linear infinite; }
+    @keyframes slide { 0% { transform: translateX(0);} 100% { transform: translateX(-50%);} }
+    /* quick print style for schedule */
+    @media print {
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>  
+  <!-- navbar  -->
+   <nav class="navbar sticky top-2 z-50" id="navbar" style="background-color: #fffaff; width: 90%; margin: 0 auto; border-radius: 20px; padding: 10px 0px 10px 0px;">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="flex justify-between  h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/db2b2d12-192f-4a84-a58c-b0d0b05b8083.png" alt="EduSphere logo featuring a purple graduation cap with a globe inside representing global learning" class="h-8 w-auto">
+                        <span class="ml-2 text-3xl font-bold text-gray-900">EduSphere</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a>
+                    <a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a>
+                    <a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a>
+                    <a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="sign.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Sign In</a>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none" id="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+ 
+     <!-- Sidebar (Mobile Menu) -->
+  <div id="sidebar" class="fixed top-0 left-0 w-72 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40" style="z-index: 100;">
+    <!-- Sidebar Header -->
+    <div class="p-6 flex items-center justify-between" style="background: linear-gradient(90deg, #ae67fa, #f576e5);">
+      <h2 class="text-white text-xl font-bold">EduSphere</h2>
+      <button id="close-btn" class="text-white focus:outline-none">
+        ✕
+      </button>
+    </div>
+
+    <!-- Sidebar Content -->
+    <div class="p-6">
+      <!-- Website image / About preview -->
+      <div class="mb-6">
+        <img src="images/ChatGPT Image Sep 8, 2025, 12_43_27 PM.png" alt="EduSphere" class="rounded-lg shadow">
+        <p class="mt-3 text-sm text-gray-600">Your smart companion for learning, tips, and resources.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="space-y-4 text-gray-800 font-medium">
+                 <li><a href="home.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Home</a></li> 
+                    <li><a href="courses.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Courses</a></li>
+                    <li><a href="about.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">Contact</a></li>
+                    <li><a href="knowledge.html" class="text-gray-900 hover:text-indigo-600 nav-link px-3 py-2 text-lg font-medium">KnowledgeHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+
+
+     <!-- HERO -->
+  <section class="py-24" style="background: linear-gradient(90deg, #ae67fa, #f576e5); border-radius: 20px; margin: 20px;">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white">Knowledge Hub — Curated <span style="color: #f576e5; background-color:  white; border-radius: 5px;font-family: Edu NSW ACT Cursive, cursive; font-size: 30px; font-weight: bolder;">learning</span> Resources</h1>
+      <p class="text-slate-600 mt-2 max-w-2xl mx-auto">Guides, cheat-sheets, tools and printable study plans — handpicked for students and lifelong learners.</p>
+
+      <div class="mt-6 mx-auto max-w-2xl">
+        <div class="flex items-center bg-white rounded-full shadow-sm px-3 py-2 gap-3">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/>
+          </svg>
+          <input id="hubSearch" class="flex-1 px-3 py-2 outline-none text-sm" placeholder="Search guides, cheat-sheets, or tools..." aria-label="Search knowledge hub" />
+          <button id="hubSearchBtn" class="ml-1 text-white px-4 py-2 rounded-full text-sm" style="background: linear-gradient(90deg , #d972ff, #ff46da);">Search</button>
+        </div>
+
+        <div class="flex gap-3 mt-4 justify-center flex-wrap">
+          <button class="hub-chip px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm" data-cat="all">All</button>
+          <button class="hub-chip px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm" data-cat="guides">Guides</button>
+          <button class="hub-chip px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm" data-cat="cheatsheets">Cheat-sheets</button>
+          <button class="hub-chip px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm" data-cat="tools">Tools</button>
+          <button class="hub-chip px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm" data-cat="playbooks">Playbooks</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED RESOURCES -->
+  <section class="max-w-6xl mx-auto px-6 mb-8">
+    <div class="bg-white rounded-2xl p-4 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-semibold">Featured resources</h2>
+        <a class="text-sm text-sky-600" href="#guides">See all guides →</a>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-3">
+        <!-- Featured 1 -->
+        <article class="p-4 rounded-xl bg-gradient-to-b from-white to-slate-50 hover-lift">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-lg bg-sky-100 flex items-center justify-center text-xl">📘</div>
+            <div>
+              <div class="text-xs inline-block bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full mb-2">Guide</div>
+              <h3 class="font-semibold">The Ultimate Guide to Exam Prep</h3>
+              <p class="text-sm text-slate-600 mt-2">A step-by-step 6-week plan with study calendars, active recall templates, and a printable calendar.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By Edusphere</span> • <span>Mar 1, 2025</span> • <span>20 min</span>
+                <button class="ml-3 text-xs text-sky-600 underline" onclick="downloadText('The Ultimate Guide to Exam Prep','A 6-week plan...')">Download</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured 2 -->
+        <article class="p-4 rounded-xl bg-gradient-to-b from-white to-slate-50 hover-lift">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-lg bg-emerald-100 flex items-center justify-center text-xl">🧠</div>
+            <div>
+              <div class="text-xs inline-block bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full mb-2">Cheat-sheet</div>
+              <h3 class="font-semibold">1-Page Memory & Revision Cheatsheet</h3>
+              <p class="text-sm text-slate-600 mt-2">One-page printable guide with spaced repetition settings, pomodoro slots and quick reminders.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By StudyLab</span> • <span>Apr 12, 2025</span> • <span>3 min</span>
+                <button class="ml-3 text-xs text-sky-600 underline" onclick="downloadText('Memory Cheatsheet','Spaced repetition schedule...')">Download</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured 3 -->
+        <article class="p-4 rounded-xl bg-gradient-to-b from-white to-slate-50 hover-lift">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-lg bg-violet-100 flex items-center justify-center text-xl">🧾</div>
+            <div>
+              <div class="text-xs inline-block bg-pink-100 text-pink-700 px-2 py-1 rounded-full mb-2">Playbook</div>
+              <h3 class="font-semibold">Career & Interview Playbook</h3>
+              <p class="text-sm text-slate-600 mt-2">CV templates, portfolio checklist, elevator pitch examples and interview scripts to practice with.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By CareerLab</span> • <span>Feb 2, 2025</span> • <span>12 min</span>
+                <button class="ml-3 text-xs text-sky-600 underline" onclick="downloadText('Career Playbook','CV templates and checklist...')">Download</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT: resources list + interactive tools sidebar -->
+  <main class="max-w-6xl mx-auto px-6 pb-16 grid gap-8 md:grid-cols-3">
+
+    <!-- Resources column -->
+    <section class="md:col-span-2 space-y-6">
+      <div class="flex items-center justify-between">
+        <h2 id="guides" class="text-xl font-semibold">All resources</h2>
+        <div class="text-sm text-slate-500" id="resCount">Showing 9 resources</div>
+      </div>
+
+      <!-- Resource grid -->
+      <div id="resourcesGrid" class="grid gap-4">
+        <!-- resource item: Guides -->
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="guides" data-title="HTML & CSS Crash Course">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-sky-100 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">HTML/CSS</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-emerald-50 text-emerald-700 px-2 py-1 rounded-full mb-2">Guide</div>
+              <h3 class="text-lg font-semibold">HTML & CSS Crash Course (Beginner → Intermediate)</h3>
+              <p class="text-slate-600 mt-2">Hands-on project-based course to build 5 real mini-projects, with code snippets and live demos.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By Dev • Oct 18, 2024</span> • <span>18 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-2 rounded-md bg-sky-600 text-white text-sm" href="#" onclick="alert('Open guide — replace with real link')">Open</a>
+            <button class="px-3 py-2 rounded-md border text-sm" onclick="downloadText('HTML & CSS Crash Course','A crash course...')">Download</button>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="cheatsheets" data-title="Math Formulas Cheatsheet">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-amber-100 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Math</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-amber-100 text-amber-700 px-2 py-1 rounded-full mb-2">Cheat-sheet</div>
+              <h3 class="text-lg font-semibold">Essential Math Formulas — One Page</h3>
+              <p class="text-slate-600 mt-2">Trigonometry, derivatives, integrals and common identities — perfect for last-minute revision.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By MathKit • Jan 9, 2025</span> • <span>2 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-2 rounded-md bg-amber-600 text-white text-sm" href="#" onclick="alert('Open cheatsheet — replace link')">Open</a>
+            <button class="px-3 py-2 rounded-md border text-sm" onclick="downloadText('Math Formulas','sin,cos,tan...')">Download</button>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="tools" data-title="GPA Calculator">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-purple-100 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Tool</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-purple-100 text-purple-700 px-2 py-1 rounded-full mb-2">Interactive Tool</div>
+              <h3 class="text-lg font-semibold">GPA Calculator</h3>
+              <p class="text-slate-600 mt-2">Enter your course credits & letter grades and get your GPA instantly. Works for 4.0 and 5.0 scales.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By Edusphere • Live tool</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <a class="px-3 py-2 rounded-md bg-violet-600 text-white text-sm" href="#gpaTool">Open tool</a>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="guides" data-title="Scholarship Guide">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-green-100 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Scholarships</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-green-100 text-green-700 px-2 py-1 rounded-full mb-2">Guide</div>
+              <h3 class="text-lg font-semibold">How to Apply for Scholarships: Step-by-step</h3>
+              <p class="text-slate-600 mt-2">Templates, timelines and a checklist for scholarship applications (local & international).</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By Edusphere • Jun 5, 2025</span> • <span>9 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-2 rounded-md bg-sky-600 text-white text-sm" href="#" onclick="alert('Open scholarship guide')">Open</a>
+            <button class="px-3 py-2 rounded-md border text-sm" onclick="downloadText('Scholarship Checklist','Checklist contents...')">Download</button>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="cheatsheets" data-title="Python Quick Reference">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-sky-50 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Python</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-sky-50 text-sky-700 px-2 py-1 rounded-full mb-2">Cheat-sheet</div>
+              <h3 class="text-lg font-semibold">Python Quick Reference — Syntax & Tips</h3>
+              <p class="text-slate-600 mt-2">Common snippets, data structures and one-line helpers to speed up daily coding tasks.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By CodeDesk • May 21, 2025</span> • <span>5 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-2 rounded-md bg-sky-600 text-white text-sm" href="#" onclick="alert('Open Python cheatsheet')">Open</a>
+            <button class="px-3 py-2 rounded-md border text-sm">Download</button>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="playbooks" data-title="Study Planner Template">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-pink-50 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Planner</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-pink-100 text-pink-700 px-2 py-1 rounded-full mb-2">Tool / Template</div>
+              <h3 class="text-lg font-semibold">Weekly Study Planner (Printable)</h3>
+              <p class="text-slate-600 mt-2">Generate a printable weekly schedule based on study hours and topics — optimized for focus blocks.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By Edusphere • Live tool</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <a class="px-3 py-2 rounded-md bg-amber-600 text-white text-sm" href="#plannerTool">Generate</a>
+            <button class="px-3 py-2 rounded-md border text-sm" onclick="downloadText('Study Planner Template','Printable planner...')">Download</button>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="guides" data-title="Active Recall Guide">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-indigo-50 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Study</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full mb-2">Guide</div>
+              <h3 class="text-lg font-semibold">Active Recall & Spaced Repetition (Practical)</h3>
+              <p class="text-slate-600 mt-2">How to build flashcards, schedule reviews and automate reminders — includes examples for maths & languages.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By MemoryLab • Mar 18, 2025</span> • <span>10 min</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <a class="px-3 py-2 rounded-md bg-indigo-600 text-white text-sm" href="#" onclick="alert('Open active recall guide')">Open</a>
+            <button class="px-3 py-2 rounded-md border text-sm" onclick="downloadText('Active Recall Guide','Active recall steps...')">Download</button>
+          </div>
+        </article>
+
+        <article class="resource-card bg-white rounded-2xl p-5 shadow-sm hover-lift fade-up" data-type="tools" data-title="Flashcard Mini-Quiz">
+          <div class="md:flex gap-4 items-start">
+            <div class="md:w-36 h-24 bg-gradient-to-r from-teal-50 to-white rounded-md flex items-center justify-center text-slate-700 font-semibold">Flashcards</div>
+            <div class="md:flex-1">
+              <div class="text-xs inline-block bg-teal-100 text-teal-700 px-2 py-1 rounded-full mb-2">Interactive</div>
+              <h3 class="text-lg font-semibold">Flashcard Mini-Quiz</h3>
+              <p class="text-slate-600 mt-2">Quick built-in flashcards to test memory. Shuffle, reveal, and track correct answers.</p>
+              <div class="mt-3 flex items-center gap-3 text-xs text-slate-400">
+                <span>By Edusphere • Live</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <a class="px-3 py-2 rounded-md bg-emerald-600 text-white text-sm" href="#flashcards">Open</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Sidebar: Tools -->
+    <aside class="space-y-6">
+
+      <!-- GPA Calculator -->
+      <div id="gpaTool" class="bg-white p-4 rounded-2xl shadow-sm fade-up">
+        <h4 class="font-semibold">GPA Calculator</h4>
+        <p class="text-sm text-slate-600 mt-1">Enter up to 6 courses. Choose grading scale then calculate.</p>
+
+        <div class="mt-3 space-y-2">
+          <div id="gpaRows" class="space-y-2">
+            <!-- dynamic rows inserted by JS -->
+          </div>
+
+          <div class="flex gap-2 mt-2">
+            <button id="addCourse" class="px-3 py-2 rounded-md bg-sky-600 text-white text-sm">Add course</button>
+            <button id="calcGPA" class="px-3 py-2 rounded-md border text-sm">Calculate</button>
+            <button id="resetGPA" class="px-3 py-2 rounded-md text-sm">Reset</button>
+          </div>
+
+          <div class="mt-2 text-sm text-slate-700">Result: <span id="gpaResult" class="font-semibold">—</span></div>
+        </div>
+      </div>
+
+      <!-- Study Planner -->
+      <div id="plannerTool" class="bg-white p-4 rounded-2xl shadow-sm fade-up">
+        <h4 class="font-semibold">Weekly Study Planner</h4>
+        <p class="text-sm text-slate-600 mt-1">Enter hours per day and list 3 topics — we generate a focused weekly plan.</p>
+
+        <div class="mt-3">
+          <label class="text-xs text-slate-500">Hours available per day</label>
+          <input id="hoursPerDay" type="number" min="1" max="16" value="4" class="w-full px-3 py-2 rounded-md border mt-1 text-sm" />
+          <label class="text-xs text-slate-500 mt-2">Primary topics (comma separated)</label>
+          <input id="plannerTopics" type="text" placeholder="Math, Algorithms, English" class="w-full px-3 py-2 rounded-md border mt-1 text-sm" />
+          <div class="flex gap-2 mt-3">
+            <button id="genPlan" class="px-3 py-2 rounded-md bg-amber-600 text-white text-sm">Generate</button>
+            <button id="printPlan" class="px-3 py-2 rounded-md border text-sm">Print</button>
+          </div>
+        </div>
+
+        <div id="plannerOutput" class="mt-3 text-sm text-slate-700"></div>
+      </div>
+
+      <!-- Flashcards -->
+      <div id="flashcards" class="bg-white p-4 rounded-2xl shadow-sm fade-up">
+        <h4 class="font-semibold">Flashcards — Mini Quiz</h4>
+        <p class="text-sm text-slate-600 mt-1">Test yourself on quick facts.</p>
+
+        <div class="mt-3">
+          <div id="cardFront" class="h-20 flex items-center justify-center text-center rounded-md bg-slate-100 text-lg font-medium">Question</div>
+          <div class="mt-3 flex gap-2">
+            <button id="showAns" class="px-3 py-2 rounded-md bg-sky-600 text-white text-sm">Show answer</button>
+            <button id="nextCard" class="px-3 py-2 rounded-md border text-sm">Next</button>
+            <button id="shuffleCards" class="px-3 py-2 rounded-md border text-sm">Shuffle</button>
+          </div>
+          <div id="cardAns" class="mt-3 text-sm text-slate-700 hidden"></div>
+          <div id="cardScore" class="mt-2 text-xs text-slate-500">Progress: <span id="cardIndex">0</span>/<span id="cardTotal">0</span></div>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- Partners -->
+  <section class="max-w-6xl mx-auto px-6 pb-12">
+    <div class="bg-white rounded-2xl p-4 shadow-sm overflow-hidden">
+      <h4 class="text-sm font-semibold mb-3">Trusted by</h4>
+      <div class="overflow-hidden">
+        <div class="partners-track">
+          <img class="h-10" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='60'><rect fill='%230ea5e9' width='200' height='60'/><text x='10' y='35' font-size='18' fill='white'>Google</text></svg>" alt="Google">
+          <img class="h-10" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='60'><rect fill='%2306b6d4' width='200' height='60'/><text x='10' y='35' font-size='18' fill='white'>Microsoft</text></svg>" alt="Microsoft">
+          <img class="h-10" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='60'><rect fill='%237c3aed' width='200' height='60'/><text x='10' y='35' font-size='18' fill='white'>Apple</text></svg>" alt="Apple">
+          <img class="h-10" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='60'><rect fill='%23f97316' width='200' height='60'/><text x='10' y='35' font-size='18' fill='white'>Amazon</text></svg>" alt="Amazon">
+          <!-- repeat to loop -->
+          <img class="h-10" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='60'><rect fill='%230ea5e9' width='200' height='60'/><text x='10' y='35' font-size='18' fill='white'>Google</text></svg>" alt="Google">
+          <img class="h-10" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='60'><rect fill='%2306b6d4' width='200' height='60'/><text x='10' y='35' font-size='18' fill='white'>Microsoft</text></svg>" alt="Microsoft">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  
+
+   <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">EduSphere</h3>
+                    <p class="mb-4">Empowering your learning journey with high-quality online education.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white">Data Science</a></li>
+                        <li><a href="#" class="hover:text-white">Mobile Development</a></li>
+                        <li><a href="#" class="hover:text-white">UX/UI Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Courses</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Community</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 EduSphere. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+          <footer>
+    <div class="max-w-6xl mx-auto px-6 py-8 text-sm text-slate-500">
+      <div class="flex flex-col md:flex-row md:justify-between gap-4 items-center">
+        <div> <span id="year"></span> </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-slate-700">Privacy</a>
+          <a href="#" class="hover:text-slate-700">Terms</a>
+          <a href="#" class="hover:text-slate-700">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    </footer>
+
+
+
+  <!-- SCRIPT: downloads, tools, search, filters -->
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // Search & filter for hub
+    const hubChips = document.querySelectorAll('.hub-chip');
+    const resourcesGrid = document.getElementById('resourcesGrid');
+    const resources = Array.from(document.querySelectorAll('.resource-card'));
+    const resCount = document.getElementById('resCount');
+
+    function updateResCount() {
+      resCount.textContent = 'Showing ' + resources.filter(r => r.style.display !== 'none').length + ' resources';
+    }
+
+    function filterResources({cat='all', q=''} = {}) {
+      q = q.trim().toLowerCase();
+      resources.forEach(r => {
+        const type = r.dataset.type || '';
+        const title = r.dataset.title ? r.dataset.title.toLowerCase() : r.textContent.toLowerCase();
+        let show = true;
+        if (cat !== 'all') show = type === cat;
+        if (q) show = show && (title.includes(q));
+        r.style.display = show ? '' : 'none';
+      });
+      updateResCount();
+    }
+
+    hubChips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        hubChips.forEach(b => b.classList.remove('bg-slate-800','text-white'));
+        btn.classList.add('bg-slate-800','text-white');
+        filterResources({ cat: btn.dataset.cat, q: document.getElementById('hubSearch').value });
+      });
+    });
+    document.querySelector('.hub-chip[data-cat="all"]').classList.add('bg-slate-800','text-white');
+
+    document.getElementById('hubSearchBtn').addEventListener('click', () => {
+      const q = document.getElementById('hubSearch').value;
+      const active = document.querySelector('.hub-chip.bg-slate-800')?.dataset.cat || 'all';
+      filterResources({ cat: active, q });
+    });
+    document.getElementById('hubSearch').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('hubSearchBtn').click(); });
+
+    // Download generated text file (simple client-side placeholder)
+    function downloadText(filename, content) {
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename.replace(/\s+/g,'_') + '.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    // GPA Calculator
+    const gpaRows = document.getElementById('gpaRows');
+    const addCourseBtn = document.getElementById('addCourse');
+    const calcGPA = document.getElementById('calcGPA');
+    const resetGPA = document.getElementById('resetGPA');
+    const gpaResult = document.getElementById('gpaResult');
+
+    const letterMap4 = { 'A+':4.0,'A':4.0,'A-':3.7,'B+':3.3,'B':3.0,'B-':2.7,'C+':2.3,'C':2.0,'D':1.0,'F':0.0 };
+    const letterMap5 = { 'A+':5.0,'A':5.0,'A-':4.5,'B+':4.0,'B':3.5,'B-':3.0,'C+':2.5,'C':2.0,'D':1.0,'F':0.0 };
+
+    function createGpaRow() {
+      const id = Date.now();
+      const div = document.createElement('div');
+      div.className = 'flex gap-2';
+      div.innerHTML = `
+        <input class="flex-1 px-2 py-1 border rounded-md text-sm" placeholder="Course name" />
+        <input class="w-20 px-2 py-1 border rounded-md text-sm" placeholder="Credits" type="number" min="0" value="3" />
+        <select class="w-20 px-2 py-1 border rounded-md text-sm">
+          <option>A+</option><option>A</option><option>A-</option><option>B+</option><option>B</option><option>B-</option><option>C+</option><option>C</option><option>D</option><option>F</option>
+        </select>
+        <button class="px-2 rounded-md text-sm border remove-btn">Remove</button>
+      `;
+      gpaRows.appendChild(div);
+      div.querySelector('.remove-btn').addEventListener('click', () => { div.remove(); });
+    }
+
+    // start with 3 rows
+    for (let i=0;i<3;i++) createGpaRow();
+
+    addCourseBtn.addEventListener('click', () => {
+      if (gpaRows.children.length >= 12) return alert('Max 12 courses'); createGpaRow();
+    });
+
+    calcGPA.addEventListener('click', () => {
+      const scale = 4; // for now 4.0 scale; extend UI later to toggle
+      const rows = Array.from(gpaRows.children);
+      if (!rows.length) { gpaResult.textContent = '—'; return; }
+      let totPoints = 0, totCredits = 0;
+      rows.forEach(r => {
+        const credit = parseFloat(r.querySelector('input[type="number"]').value) || 0;
+        const grade = r.querySelector('select').value;
+        const map = scale === 5 ? letterMap5 : letterMap4;
+        const points = (map[grade] || 0) * credit;
+        totPoints += points;
+        totCredits += credit;
+      });
+      if (totCredits === 0) { gpaResult.textContent = 'No credits'; return; }
+      const gpa = (totPoints / totCredits).toFixed(2);
+      gpaResult.textContent = gpa + ' ('+scale+'.0 scale)';
+    });
+
+    resetGPA.addEventListener('click', () => {
+      gpaRows.innerHTML = ''; for (let i=0;i<3;i++) createGpaRow(); gpaResult.textContent = '—';
+    });
+
+    // Planner: create simple weekly blocks
+    const genPlan = document.getElementById('genPlan');
+    const printPlan = document.getElementById('printPlan');
+    genPlan.addEventListener('click', () => {
+      const hrs = Math.max(1, Math.min(16, parseFloat(document.getElementById('hoursPerDay').value||4)));
+      const topicsRaw = document.getElementById('plannerTopics').value.trim();
+      const topics = topicsRaw ? topicsRaw.split(',').map(t=>t.trim()).filter(Boolean) : ['Revision','Projects','Practice'];
+      const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+      // distribute hours across topics in a round-robin
+      let html = '<div class="space-y-2">';
+      days.forEach((d,di) => {
+        const blocks = Math.max(1, Math.round(hrs / 1.5)); // number of blocks
+        html += `<div class="bg-slate-50 p-2 rounded-md"><strong>${d} — ${hrs} hrs</strong><div class="text-sm mt-1">`;
+        for (let b=0;b<blocks;b++){
+          const topic = topics[(di + b) % topics.length];
+          html += `<div>• ${topic} — ${Math.round((hrs/blocks)*10)/10} hrs</div>`;
+        }
+        html += '</div></div>';
+      });
+      html += '</div><div class="text-xs text-slate-500 mt-2">Tip: Print this schedule and stick to 50–60 min focused sessions.</div>';
+      document.getElementById('plannerOutput').innerHTML = html;
+    });
+    printPlan.addEventListener('click', () => { window.print(); });
+
+    // Flashcards
+    const cards = [
+      {q:'What is spaced repetition?', a:'A learning technique that increases intervals between reviews.'},
+      {q:'Pomodoro: how long is one focused session?', a:'Typically 25 minutes focused, then a 5-min break.'},
+      {q:'Active recall is...', a:'A method where you try to remember information without looking at notes.'}
+    ];
+    let cardIndex = 0;
+    function showCard(i) {
+      const c = cards[i];
+      document.getElementById('cardFront').textContent = c.q;
+      document.getElementById('cardAns').textContent = c.a;
+      document.getElementById('cardAns').classList.add('hidden');
+      document.getElementById('cardIndex').textContent = i+1;
+      document.getElementById('cardTotal').textContent = cards.length;
+    }
+    document.getElementById('nextCard').addEventListener('click', () => { cardIndex = (cardIndex+1)%cards.length; showCard(cardIndex); });
+    document.getElementById('showAns').addEventListener('click', () => { document.getElementById('cardAns').classList.toggle('hidden'); });
+    document.getElementById('shuffleCards').addEventListener('click', () => {
+      for (let i=cards.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [cards[i],cards[j]]=[cards[j],cards[i]]; }
+      cardIndex=0; showCard(0);
+    });
+    // init
+    showCard(0);
+
+    // small accessibility: allow Enter to generate planner
+    document.getElementById('plannerTopics').addEventListener('keydown', e => { if (e.key === 'Enter') genPlan.click(); });
+
+    // initial resource count
+    updateResCount();
+  </script>
+  <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
